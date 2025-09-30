@@ -81,7 +81,15 @@ body {
 }
 
 .profile-photo {
-    border-radius: 100px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+    background-image: url('../images/avatar.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .profile-title {
