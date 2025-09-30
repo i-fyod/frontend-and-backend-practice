@@ -1,0 +1,197 @@
+body {
+    font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #a8e6cf 0%, #ffaaa5 100%);
+    min-height: 100vh;
+    height: 100%;
+}
+
+.page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgb(230, 70, 70);
+    min-height: 100vh;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.header, .footer {
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    color: #2e4a3d;
+    text-align: center;
+    padding: 30px;
+    font-size: 28px;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.nav {
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(12px);
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    position: relative;
+    z-index: 10;
+}
+
+.nav-list {
+    list-style: none;
+    margin: 5;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.nav-item {
+    margin: 0;
+}
+
+.nav-link {
+    color: #2e4a3d;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.nav-link:hover {
+    background: rgba(168, 230, 207, 0.5);
+    transform: translateY(-2px);
+    color: #2e4a3d
+}
+
+.content {
+    padding: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.profile-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.profile-photo {
+    border-radius: 100px;
+}
+
+.profile-title {
+    font-size: 32px;
+    color: #2e4a3d;
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+
+.profile-name {
+    font-size: 24px;
+    color: #2e4a3d;
+    margin: 10px 0;
+    font-weight: 500;
+}
+
+.profile-group {
+    font-size: 18px;
+    color: #464e4e;
+    margin: 5px 0;
+}
+
+.about-me {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 25px;
+    border-radius: 15px;
+    margin: 30px 0;
+    border-left: 5px solid #a8e6cf;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.skill-tag {
+    background: linear-gradient(135deg, #a8e6cf 0%, #ffd3b6 100%);
+    color: black;
+    padding: 12px 25px; 
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 14px;
+    box-shadow: 0 4px 15px rgba(168, 230, 207, 0.4);
+    transition: all 0.3s ease; 
+}
+
+.skill-tag:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(168, 230, 207, 0.5);
+}
+
+.experience-card, .news-card, .good-card {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 25px;
+    margin: 20px 0;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0, 0.08);
+    border-left: 4px solid #a8e6cf;
+    transition: transform 0.3s ease;
+}
+
+.experience-card:hover, .news-card:hover, .good-card:hover {
+    transform: translateY(5px);
+}
+
+.experience-title, .news-title, .good-name, .email, .address{
+    font-size: 20px;
+    color: #2e4a3d;
+    margin: 0 0 10px 0;
+    font-weight: 600;
+}
+
+.experience-desc, .good-price {
+    color: #7f8c8d;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.btn-call-me {
+    display: block;
+    margin: 30px auto;
+    padding: 14px 32px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #2e4a3d;
+    background: linear-gradient(135deg, #a8e6cf 0%, #ffd3b6 100%);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(168, 230, 207, 0.4);
+    letter-spacing: 0.5px;
+}
+
+.btn-call-me:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(168, 230, 207, 0.6);
+    background: linear-gradient(135deg, #baf0d9 0%, #ffe0c9 100%);
+}
+
+.btn-call-me:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 10px rgba(168, 230, 207, 0.4);
+}
+
+.footer {
+    margin-top: 50px;
+}
