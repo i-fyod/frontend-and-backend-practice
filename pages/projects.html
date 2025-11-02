@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Портфолио студента - Проекты</title>
+    <link rel="stylesheet" href="../styles/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container header-content">
+        <div class="logo">
+          <div class="logo-placeholder">Ф</div>
+          <div class="student-name">Федоров Илья</div>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="../index.html">Главная</a></li>
+            <li><a href="projects.html" class="active">Проекты</a></li>
+            <li><a href="diary.html">Дневник</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="projects-header">
+          <h2>Мои проекты</h2>
+          <div class="filters">
+            <button class="filter-btn active" data-filter="all">Все</button>
+            <button class="filter-btn" data-filter="react">React</button>
+            <button class="filter-btn" data-filter="typescript">TypeScript</button>
+            <button class="filter-btn" data-filter="js">JavaScreen</button>
+            <button class="filter-btn" data-filter="html">HTML</button>
+            <button class="filter-btn" data-filter="css">CSS</button>
+            <button class="filter-btn" data-filter="zustand">Zustand</button>
+            <button class="filter-btn" data-filter="tanstack-router">TanStack Router</button>
+            <button class="filter-btn" data-filter="tanstack-query">TanStack Query</button>
+          </div>
+        </div>
+
+        <div class="projects-grid-large">
+          <div
+            class="project-card-large"
+            data-categories="react,typescript,sass,zustand,tanstack-router,tanstack-query,vite,zod"
+            data-project="1"
+          >
+            <img
+              class="project-image"
+              src="../assets/images/projectNews.jpg"
+            />
+            <div class="project-info">
+              <h3>project-news</h3>
+              <p>Приложение-интерфейс для удобного просмотра и сохранения актуальных новостей.</p>
+              <div class="project-tags">
+                <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Sass</span><span class="tag">Zustand</span><span class="tag">TanStack Router</span><span class="tag">TanStack Query</span><span class="tag">Vite</span><span class="tag">Zod</span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="project-card-large"
+            data-categories="react,typescript,vite,mantine,tanstack-query,tanstack-router,axios,recharts"
+            data-project="2"
+          >
+            <img
+              class="project-image"
+              src="../assets/images/financeApp.png"
+            />
+            <div class="project-info">
+              <h3>financeApp</h3>
+              <p>Фронтенд-приложение для управления личными финансами.</p>
+              <div class="project-tags">
+                <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Mantine</span><span class="tag">TanStack Query</span><span class="tag">TanStack Router</span><span class="tag">axios</span><span class="tag">recharts</span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="project-card-large"
+            data-categories="node.js,axios,cheerio,playwright,@caporal/core"
+            data-project="3"
+          >
+            <img
+              class="project-image"
+              src="../assets/images/wallhavenCli.webp"
+            />
+            <div class="project-info">
+              <h3>wallhavenCli</h3>
+              <p>Утилита командной строки для загрузки обоев с Wallhaven.</p>
+              <div class="project-tags">
+                <span class="tag">Node.js</span><span class="tag">axios</span><span class="tag">cheerio</span><span class="tag">playwright</span><span class="tag"> @caporal/core</span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="project-card-large"
+            data-categories="html,css,javascript"
+            data-project="4"
+          >
+            <img
+              class="project-image"
+              src="../assets/images/calculatorApp.webp"
+            />
+            <div class="project-info">
+              <h3>Calculator App</h3>
+              <p>Простой и красивый калькулятор на чистом JavaScript.</p>
+              <div class="project-tags">
+                <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div id="project-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="modal-header">
+          <h2 id="modal-title">Название проекта</h2>
+          <div class="project-tags" id="modal-tags"></div>
+        </div>
+        <div class="modal-body">
+          <div class="project-screenshots" id="modal-screenshots"></div>
+          <div class="project-details">
+            <h3>Описание проекта</h3>
+            <p id="modal-description">Описание проекта...</p>
+
+            <h3>Особенности</h3>
+            <ul id="modal-features"></ul>
+
+            <h3>Технологии</h3>
+            <div class="tech-stack" id="modal-technologies"></div>
+
+            <div class="project-links" id="modal-links"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <p>© 2025 Контакты</p>
+      </div>
+    </footer>
+
+    <script src="../scripts/main.js"></script>
+    <script src="../scripts/constants.js"></script>
+  </body>
+</html>

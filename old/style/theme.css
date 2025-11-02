@@ -1,0 +1,133 @@
+
+:root {
+    --background-light: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+    --text-light: #333;
+    --header-bg-light: #ffffff;
+    --nav-bg-light: #ffffff;
+    --nav-link-bg-light: #e9ecef;
+    --nav-link-hover-bg-light: #dee2e6;
+    --card-bg-light: #ffffff;
+    --card-border-light: #4fd1c5;
+
+    --background-dark: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+    --text-dark: #eaeaea;
+    --header-bg-dark: rgba(26, 32, 44, 0.8);
+    --nav-bg-dark: rgba(26, 32, 44, 0.8);
+    --nav-link-bg-dark: rgba(74, 85, 104, 0.4);
+    --nav-link-hover-bg-dark: rgba(45, 55, 72, 0.7);
+    --card-bg-dark: rgba(45, 55, 72, 0.5);
+    --card-border-dark: #4fd1c5;
+}
+
+[data-theme='light'] body {
+    background: var(--background-light);
+    color: var(--text-light);
+}
+
+[data-theme='dark'] body {
+    background: var(--background-dark);
+    color: var(--text-dark);
+}
+
+[data-theme='light'] .header,
+[data-theme='light'] .footer {
+    background: var(--header-bg-light);
+    color: var(--text-light);
+    border-bottom: 1px solid #ddd;
+}
+
+[data-theme='dark'] .header,
+[data-theme='dark'] .footer {
+    background: var(--header-bg-dark);
+    color: var(--text-dark);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+[data-theme='light'] .nav {
+    background: var(--nav-bg-light);
+    border-bottom: 1px solid #ddd;
+}
+
+[data-theme='dark'] .nav {
+    background: var(--nav-bg-dark);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+[data-theme='light'] .nav-link {
+    background: var(--nav-link-bg-light);
+    color: var(--text-light);
+}
+
+[data-theme='dark'] .nav-link {
+    background: var(--nav-link-bg-dark);
+    color: var(--text-dark);
+}
+
+[data-theme='light'] .nav-link:hover {
+    background: var(--nav-link-hover-bg-light);
+}
+
+[data-theme='dark'] .nav-link:hover {
+    background: var(--nav-link-hover-bg-dark);
+}
+
+[data-theme='light'] .experience-card,
+[data-theme='light'] .news-card,
+[data-theme='light'] .good-card {
+    background: var(--card-bg-light);
+    border-left: 4px solid var(--card-border-light);
+}
+
+[data-theme='dark'] .experience-card,
+[data-theme='dark'] .news-card,
+[data-theme='dark'] .good-card {
+    background: var(--card-bg-dark);
+    border-left: 4px solid var(--card-border-dark);
+}
+
+[data-theme='light'] .news-title {
+    color: var(--text-light);
+}
+
+[data-theme='dark'] .news-title {
+    color: var(--text-dark);
+}
+
+.header__theme-toggle {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+[data-theme='light'] .header__theme-toggle {
+    background-color: var(--nav-link-bg-light);
+    color: var(--text-light);
+    border: 1px solid var(--text-light);
+}
+
+[data-theme='dark'] .header__theme-toggle {
+    background-color: var(--nav-link-bg-dark);
+    color: var(--text-dark);
+    border: 1px solid var(--text-dark);
+}
+
+.header__theme-toggle:hover {
+    transform: scale(1.1) rotate(360deg);
+}
+
+
+#theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}

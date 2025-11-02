@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Портфолио студента - Дневник</title>
+    <link rel="stylesheet" href="../styles/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container header-content">
+        <div class="logo">
+          <div class="logo-placeholder">Л</div>
+          <div class="student-name">Ланец Артем</div>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="../index.html">Главная</a></li>
+            <li><a href="projects.html">Проекты</a></li>
+            <li><a href="diary.html" class="active">Дневник</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <h2>Мой учебный прогресс</h2>
+
+        <div class="diary-grid">
+          <div class="diary-section">
+            <h3>Задачи</h3>
+            <div class="diary-entry">
+              <div class="diary-date">20 янв</div>
+              <div class="diary-task">Изучение HTML5</div>
+              <div class="status status-completed">✓</div>
+            </div>
+            <div class="diary-entry">
+              <div class="diary-date">15 янв</div>
+              <div class="diary-task">Освоение CSS3</div>
+              <div class="status status-completed">✓</div>
+            </div>
+            <div class="diary-entry">
+              <div class="diary-date">10 янв</div>
+              <div class="diary-task">Введение в JavaScript</div>
+              <div class="status status-in-progress">in progress</div>
+            </div>
+            <div class="diary-entry">
+              <div class="diary-date">05 янв</div>
+              <div class="diary-task">Работа с Git</div>
+              <div class="status status-pending">pending</div>
+            </div>
+            <button class="add-entry-btn">Добавить запись</button>
+          </div>
+
+          <div class="courses-section">
+            <h3>Текущие курсы</h3>
+            <div class="course-progress">
+              <div class="course-name">
+                <span>Основы программирования</span>
+                <span>95%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-level" style="width: 95%"></div>
+              </div>
+            </div>
+            <div class="course-progress">
+              <div class="course-name">
+                <span>Frontend разработка</span>
+                <span>80%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-level" style="width: 80%"></div>
+              </div>
+            </div>
+            <div class="course-progress">
+              <div class="course-name">
+                <span>Базы данных</span>
+                <span>60%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-level" style="width: 60%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>© 2025 Контакты</p>
+      </div>
+    </footer>
+
+    <script src="../scripts/main.js"></script>
+  </body>
+</html>

@@ -1,59 +1,90 @@
-<!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Контакты</title>
-        <link rel="stylesheet" href="../style/styles.css" />
-        <link rel="stylesheet" href="../style/theme.css" />
-    </head>
-    <body>
-        <header class="header">
-            <div class="container">
-                <div class="row justify-content-between align-items-center">
-                    <div class="col">
-                        <h1 class="h3 mb-1">Контакты</h1>
-                    </div>
-                    <div class="col-auto">
-                        <button class="header__theme-toggle btn btn-outline-light" aria-label="Переключить тему">
-                            <span class="header__theme-icon">🌙</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </header>
-
-        <nav class="nav">
-            <ul class="nav-list">
-                <li class="nav-item">
-                    <a class="nav-link" href="../index.html">Главная</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="news.html">Новости</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="practices.html">Практики</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="goods.html">Товары</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contacts.html">Контакты</a>
-                </li>
-            </ul>
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Портфолио студента - Контакты</title>
+    <link rel="stylesheet" href="../style/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container header-content">
+        <div class="logo">
+          <div class="logo-placeholder">Ф</div>
+          <div class="student-name">Федоров Илья</div>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="../index.html">Главная</a></li>
+            <li><a href="projects.html">Проекты</a></li>
+            <li><a href="diary.html">Дневник</a></li>
+            <li><a href="contacts.html" class="active">Контакты</a></li>
+          </ul>
         </nav>
+      </div>
+    </header>
 
-        <main class="content">
-            <div class="contact-details">
-                <p class="email">
-                    <strong>Email:</strong>
-                    <a href="mailto:me@ifyod.ru">me@ifyod.ru</a>
-                </p>
-                <p class="address"><strong>Адрес:</strong> Москва</p>
+    <main>
+      <div class="container">
+        <h2>Свяжитесь со мной</h2>
+
+        <div class="contact-container">
+          <div class="contact-form">
+            <form id="contactForm">
+              <div class="form-group">
+                <label for="name">Имя:</label>
+                <input
+                  type="text"
+                  id="name"
+                  class="form-control"
+                  placeholder="Введите ваше имя"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input
+                  type="email"
+                  id="email"
+                  class="form-control"
+                  placeholder="Введите ваш email"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="message">Сообщение:</label>
+                <textarea
+                  id="message"
+                  class="form-control"
+                  placeholder="Введите ваше сообщение"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn">Отправить сообщение</button>
+            </form>
+          </div>
+
+          <div class="contact-info">
+            <h3>Контакты:</h3>
+            <div class="contact-item">
+              <div class="contact-icon">☒</div>
+              <div><a href="mailto:me@ifyod.ru">me@ifyod.ru</a></div>
             </div>
-        </main>
+            <div class="contact-item">
+              <div class="contact-icon">♀</div>
+              <div>Москва</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
 
-        <footer class="footer">Футер</footer>
-        <script src="../js/theme.js"></script>
-    </body>
+    <footer>
+      <div class="container">
+        <p>© 2025 Федоров Илья. Все права защищены.</p>
+      </div>
+    </footer>
+
+    <script src="../scripts/main.js"></script>
+  </body>
 </html>

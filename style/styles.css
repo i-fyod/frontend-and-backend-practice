@@ -1,243 +1,318 @@
-body {
-    font-family: "Segoe UI", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+/* Общие стили */
+* {
     margin: 0;
     padding: 0;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    color: #eaeaea;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.page-container {
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
     max-width: 1200px;
     margin: 0 auto;
-    background: #1a202c;
-    min-height: 100vh;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    padding: 0 20px;
 }
 
-.header,
-.footer {
-    background: rgba(26, 32, 44, 0.8);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    color: #eaeaea;
-    text-align: center;
-    padding: 30px;
-    font-size: 28px;
-    font-weight: 300;
-    letter-spacing: 2px;
+/* Шапка сайта */
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.nav {
-    background: rgba(26, 32, 44, 0.8);
-    backdrop-filter: blur(12px);
-    padding: 15px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    position: relative;
-    z-index: 10;
-}
-
-.nav-list {
-    list-style: none;
-    margin: 5;
-    padding: 0;
+.header-content {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-placeholder {
+    width: 40px;
+    height: 40px;
+    background-color: #3498db;
+    border-radius: 50%;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 25px;
+    color: white;
+    font-weight: bold;
 }
 
-.nav-item {
-    margin: 0;
+.student-name {
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
-.nav-link {
-    color: #eaeaea;
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
     text-decoration: none;
-    padding: 12px 20px;
-    border-radius: 20px;
-    transition: all 0.3s ease;
-    font-weight: 600;
-    font-size: 16px;
-    background: rgba(74, 85, 104, 0.4);
+    font-weight: 500;
+    transition: color 0.3s;
 }
 
-.nav-link:hover {
-    background: rgba(45, 55, 72, 0.7);
-    transform: translateY(-2px);
-    color: #ffffff;
+nav ul li a:hover {
+    color: #3498db;
 }
 
-.content {
-    padding: 40px;
-    max-width: 900px;
-    margin: 0 auto;
-    flex-grow: 1;
+/* Основной контент */
+main {
+    padding: 40px 0;
+    min-height: calc(100vh - 200px);
 }
 
-.profile-header {
+/* Подвал сайта */
+footer {
+    background-color: #2c3e50;
+    color: white;
     text-align: center;
+    padding: 20px 0;
+}
+
+/* Стили для главной страницы */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin-bottom: 40px;
 }
 
-.profile-photo {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    margin: 0 auto 10px;
-    background-image: url("../images/avatar.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    border: 3px solid #4a5568;
+.hero-text {
+    flex: 1;
+    padding-right: 40px;
 }
 
-.profile-title {
-    font-size: 32px;
-    color: #eaeaea;
-    margin-bottom: 10px;
-    font-weight: 300;
-}
-
-.profile-name {
-    font-size: 24px;
-    color: #eaeaea;
-    margin: 10px 0;
-    font-weight: 500;
-}
-
-.profile-group {
-    font-size: 18px;
-    color: #a0aec0;
-    margin: 5px 0;
-}
-
-.about-me {
-    background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
-    padding: 25px;
-    border-radius: 15px;
-    margin: 30px 0;
-    border-left: 5px solid #4fd1c5;
-    font-size: 16px;
-    line-height: 1.8;
-    color: #eaeaea;
-}
-
-.skills-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin: 30px 0;
-}
-
-.skill-tag {
-    background: linear-gradient(135deg, #4fd1c5 0%, #81e6d9 100%);
-    color: #1a202c;
-    padding: 12px 25px;
-    border-radius: 25px;
-    font-weight: 600;
-    font-size: 14px;
-    box-shadow: 0 4px 15px rgba(79, 209, 197, 0.2);
-    transition: all 0.3s ease;
-}
-
-.skill-tag:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(79, 209, 197, 0.3);
-}
-
-.experience-section {
-    margin-top: 50px;
-}
-
-.section-title {
-    font-size: 28px;
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
     color: #2c3e50;
-    text-align: center;
-    margin-bottom: 30px;
-    font-weight: 300;
 }
 
-.experience-card,
-.news-card,
-.good-card {
-    background: rgba(45, 55, 72, 0.5);
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+}
+
+.photo-placeholder {
+    width: 300px;
+    height: 300px;
+    background-color: #ddd;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #777;
+    font-size: 1.2rem;
+    object-fit: cover;
+}
+
+.skills-section {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 40px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.skills-section h2 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.skill {
+    margin-bottom: 15px;
+}
+
+.skill-name {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.skill-bar {
+    height: 10px;
+    background-color: #ecf0f1;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.skill-level {
+    height: 100%;
+    background-color: #3498db;
+}
+
+.projects-section {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.projects-section h2 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.project-card {
+    height: 150px;
+    background-color: #ecf0f1;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+/* Стили для страницы дневника */
+.news-section {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.news-card {
+    background: #f8f9fa;
     padding: 25px;
     margin: 20px 0;
     border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-    border-left: 4px solid #4fd1c5;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #3498db;
     transition: transform 0.3s ease;
 }
 
-.experience-card:hover,
-.news-card:hover,
-.good-card:hover {
-    transform: translateY(5px);
+.news-card:hover {
+    transform: translateY(-5px);
 }
 
-.experience-title,
-.news-title,
-.good-name,
-.email,
-.address {
+.news-title {
     font-size: 20px;
     margin: 0 0 10px 0;
     font-weight: 600;
+    color: #2c3e50;
 }
 
-.experience-desc,
-.good-price {
-    color: #a0aec0;
+.news-author {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.news-text {
     line-height: 1.6;
-    margin: 0;
 }
 
-.btn-call-me {
+/* Стили для страницы контактов */
+.contact-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+}
+
+.contact-form {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
     display: block;
-    margin: 30px auto;
-    padding: 14px 32px;
-    font-size: 18px;
-    font-weight: 600;
-    color: #1a202c;
-    background: linear-gradient(135deg, #4fd1c5 0%, #81e6d9 100%);
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(79, 209, 197, 0.2);
-    letter-spacing: 0.5px;
+    margin-bottom: 5px;
+    font-weight: 500;
 }
 
-.btn-call-me:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(79, 209, 197, 0.3);
-    background: linear-gradient(135deg, #5edad0 0%, #92f0e3 100%);
+.form-control {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
 }
 
-.btn-call-me:active {
-    transform: translateY(0);
-    box-shadow: 0 3px 10px rgba(79, 209, 197, 0.2);
+textarea.form-control {
+    height: 150px;
+    resize: vertical;
 }
 
-.footer {
-    margin-top: 50px;
+.contact-info {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
-@media (max-width: 768px) {
-    .nav-list {
-        flex-direction: column;
-        align-items: center;
-    }
+.contact-info h3 {
+    margin-bottom: 20px;
+    color: #2c3e50;
 }
 
-@media (max-width: 480px) {
-    .nav-link {
-        padding: 10px 15px;
-    }
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.contact-icon {
+    width: 30px;
+    height: 30px;
+    background-color: #3498db;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    color: white;
 }
