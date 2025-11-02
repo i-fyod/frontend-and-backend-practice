@@ -1,0 +1,20 @@
+.skill-tag {
+    background: linear-gradient(135deg, #4fd1c5 0%, #81e6d9 100%);
+    color: #1a202c;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 14px;
+    box-shadow: 0 4px 15px rgba(79, 209, 197, 0.2);
+    transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(79, 209, 197, 0.3);
+}
+
+.card--selected {
+    border: 2px solid #4fd1c5;
+    box-shadow: 0 0 15px rgba(79, 209, 197, 0.5);
+}
