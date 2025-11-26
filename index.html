@@ -8,15 +8,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+    <header role="banner">
         <div class="container header-content">
             <div class="logo">
-                <div class="logo-placeholder">Ф</div>
+                <div class="logo-placeholder" aria-hidden="true">Ф</div>
                 <div class="student-name">Федоров Илья</div>
             </div>
-            <nav>
+            <nav aria-label="Основная навигация">
                 <ul>
-                    <li><a href="index.html" class="active">Главная</a></li>
+                    <li><a href="index.html" class="active" aria-current="page">Главная</a></li>
                     <li><a href="pages/projects.html">Проекты</a></li>
                     <li><a href="pages/diary.html">Дневник</a></li>
                     <li><a href="pages/contacts.html">Контакты</a></li>
@@ -25,7 +26,7 @@
         </div>
     </header>
 
-    <main>
+    <main id="main" role="main">
         <div class="container">
             <!-- Главная страница -->
             <section id="home" class="page active">
@@ -185,7 +186,7 @@
             </section>
         </main>
 
-    <footer>
+    <footer role="contentinfo">
         <div class="container">
             <p>© 2025 Контакты</p>
         </div>
